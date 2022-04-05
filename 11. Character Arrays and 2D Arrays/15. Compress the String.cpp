@@ -48,16 +48,8 @@ string getCompressedString(string &input) {
 				j++;
 			}
 			output += char(count + 48);
-			j = i + count;
-			int s = i + 1;
-			while (input[j] != '\0') {
-				input[s] = input[j];
-				j++;
-				s++;
-			}
-			input[s] = '\0';
 		}
-		i++;
+		i+=count;
 	}
 	return output;
 }
